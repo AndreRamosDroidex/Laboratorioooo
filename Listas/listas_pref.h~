@@ -1,0 +1,74 @@
+#ifndef PILASp_LIST
+#define PILASp_LIST
+#include <string.h>
+template<class T>
+
+class Nodpre{
+	public:
+		Nodpre(){
+			next=prev=0;
+	        }
+	     	T info;
+     		Nodpre<T> *next,*prev;
+     		Nodpre(const T&el, Nodpre *n,Nodpre*p){
+	         	info=el;next=n;prev=p;
+	    	 }
+
+
+
+	};
+template<class T>
+class Pilap{
+	public:
+		int tam;
+		int tami;
+		Pilap(){
+		  primero=ultimo=0;
+		  primeroc=ultimoc=0;
+		  primeros=ultimos=0;
+		  primerosc=ultimosc=0;
+		  primerosci=ultimosci=0;
+		}
+                ~Pilap();
+		T isEmpty(){
+		  
+		  return primero=="0";
+			
+		}
+		T isEmptyc(){
+		  
+		  return primeroc=="0";
+			
+		}
+		T isEmptys(){
+		  
+		  return primeros=="0";
+			
+		}
+		T isEmptysc(){
+		  
+		  return primerosc=="0";
+			
+		}
+		T isEmptysci(){
+		  
+		  return primerosci=="0";
+			
+		}
+		void print_pila();
+		void print_pilap();
+		void print_pilas();
+		void print_pilasc();
+		void push(const T&);
+		void pop();
+		void push_pref();
+		void pop_pref();
+		//T* deleteFromHead();
+		//T deleteFromTail();
+		//void deleteNode(const T&);
+		//bool isInList(const T&) const;
+	private:
+		Nodpre<T>  *ultimo,*primero,*ultimoc,*primeroc,*ultimos,*primeros,*ultimosc,*primerosc,*ultimosci,*primerosci;
+
+        };
+	#endif

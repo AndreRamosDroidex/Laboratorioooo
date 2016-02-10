@@ -1,0 +1,178 @@
+#include <stdlib.h>
+#include <iostream>
+#include "listas.h"
+#include "listasDobl.h"
+#include "listasDobl.cpp"
+#include "listasCicl.h"
+#include "listasCicl.cpp"
+#include "list_pilas.h"
+#include "list_pilas.cpp"
+#include "list_colas.h"
+#include "list_colas.cpp"
+#include "listas_pref.h"
+#include "listas_pref.cpp"
+#include <string.h>
+#include <string>
+#include <sstream>
+
+/*
+void string_to_char(string a){
+	char pref[20]=a;
+
+}
+void separa_pref(string a){
+	
+
+}
+*/
+/*
+void recibir(){
+	string a;
+	cin>>a;
+	char rec[20];
+	for(int i=0;i<a.length();i++){
+		rec[i]=a[i];
+		cout<<rec[i];	
+	}
+	
+																								
+	//char rec[20]=a;
+}
+*/
+//void sep_pref(){
+//	
+//
+//}
+
+using namespace std;
+
+int main(){
+	//zcout<<5.0/4.0<<endl;;
+	//r[1]=t;
+	//recibir();
+	/////////////////////////colas//////////////////////////////7
+	//Cola<int> a;
+	//a.push(6);
+	//a.push(4);
+	//a.push(3);
+	//a.pop();
+	/////////////////////////PILAS/////////////////////////////7
+	//Pilap<string> a;
+	//a.push(4);
+	//a.push(6);
+	//a.push(23);
+	//a.push(34);
+	//a.push(1);
+	//a.push(2);
+	//a.push(3);
+	//a.print_pila();
+	//a.pop();
+	///////////////////////////PILAS PREF//////////////////////////////////////
+
+	//string b="(4+4)+4*4+6";	
+       	//char pref[20]="(4+4)+4*4+6";
+	//Pilap<string>d;	
+        //Pilap<char>a;
+	//a.push_pref();	
+	//a.print_pila();
+	//a.pop();
+ 	//a.print_pilap();
+        //a.pop_pref();
+	//int t=5;
+	//char y;
+	//y=(t+'0');
+	//char u='3';
+	//int f=u-'0';
+	//cout<<f+4;
+	//cout<<y<<endl;
+	//int e=4;
+	//cout<<(('9'-'0') + ('6'-'0'))+e<<endl;
+	//a.print_pilasc();
+	//a.print_pilas();
+	//char e='6';
+	//int m;
+	//m=e-'0';
+	//m=m+1;
+	//cout<<m<<endl;
+	//a=pref;
+	//a.separa_pref("sssssss");
+	//a.push('e');
+	//a.push('r');
+	//a.pop();
+	//////////////////////////////////////////////PILASPREF STRINGS//////////
+	/*
+	Pilap<string> a;
+	a.push("hola");
+	a.push(" ");
+	a.push("Andre");
+	a.print_pila();
+	//string a = "25";
+	string q;
+	string f="((1+2)*4)";
+	int tam=f.length();
+	char b[20]="((1+2)*4)";
+	cout<<b[tam-1]<<endl;
+	char t='3';
+	char u='4';
+	//string d;
+	//d=t+u;
+	//cout<<f(0);
+	
+stringstream ss;
+string s;
+char c = 'a';
+ss << c;
+ss >> s;
+
+	cout<<s+" "+"4444";
+	*/	
+	Pilap<string>d;
+	d.push_pref();	
+	//d.print_pila();
+	//a.pop();
+ 	d.print_pilap();
+        d.pop_pref();
+	//cout<<b[0];
+	//string d="#";	
+	//string r=d+f;
+	//cout<<r;
+	//int r=0;
+	//for(int i=0;i<tam-r;i++){
+	//	if(f(0)=="(")
+	//	     cout<<"valeeeee"<<endl;
+	//}
+
+        ///////////////////////////CIRCULARES//////////////////////////////////////
+	//IntSLLis<int> a;
+	//a.addToActual(1);
+	//a.addToActual(2);
+	//a.addToActual(3);
+	//a.addToActual(4);
+	//a.addToActual(5);
+	//a.addToActual(6);
+
+	//a.print_list();	
+	
+	///////////////////////////DOBLES//////////////////////////////////////////////////
+	//DoublyLinkedList<int> c;	
+	//c.addToDLLHead(7);
+	//c.addToDLLHead(9);
+	//c.addToDLLHead(5);
+	//c.addToDLLHead(30);
+	//c.print_listDobl();
+	//cout<<"NUEVO"<<endl;
+	//c.deleteNode(30);
+	//c.print_listDobl();
+	//cout<<"N"<<endl;
+	//
+	////////////////////////////SIMPLES/////////////////////////////////////////////////	
+	//IntSLList a;
+    //a.addToHead(7);
+	//a.addToTail(5);
+	//a.deleteNode(5);
+	//a.print_list();
+	return 0;
+}
+
+
+

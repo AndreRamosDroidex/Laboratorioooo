@@ -1,0 +1,36 @@
+#ifndef INT_LINKEDC_LIST
+#define INT_LINKEDC_LIST
+template<class T>
+class Nodc{
+	public:
+	     	T info;
+     		Nodc<T> *next;
+     		Nodc(const T&el, Nodc *ptr= 0){
+	         	info=el;next=ptr;
+	    	 }
+
+
+
+	};
+template<class T>
+class IntSLLis{
+	public:
+		IntSLLis(){
+		  prev=actual=0;
+		}
+                ~IntSLLis();
+		T isEmpty(){
+		  return prev==0;
+		}
+		void print_list(const T&);
+		//void addToCab(const T&);
+		void addToActual(const T&);
+		//T* deleteFromHead();
+		//T deleteFromTail();
+		//void deleteNode(const T&);
+		//bool isInList(const T&) const;
+	private:
+		Nodc<T>  *actual, *prev;
+
+        };
+	#endif

@@ -1,0 +1,42 @@
+#ifndef DOUBLY_LINKED_C_D_LIST
+#define DOUBLY_LINKED_C_D_LIST
+#include <iostream>
+using namespace std;
+template<class T>
+class Nodedc{
+public:
+	Nodedc(){
+		next=prev=0;
+	}
+	Nodedc(const T& el,Nodedc *n,Nodedc*p){
+		info=el;next=n;prev=p;
+	}
+	T info;
+	Nodedc<T> *next,*prev;
+};
+
+template<class T>
+class Listdc{
+public:
+	Listdc(){
+		head=tail=0;
+
+	}
+	~Listdc();
+	T isEmpty(){
+		  return head==0;
+	}
+	
+	T deleteFromDLLTail();
+	T deleteFromDLLHead();
+	void addToDLLTail(const T&);
+	void addToDLLHead(const T&);
+    	void deleteNode(const T&);
+	void print_listDobl();
+        //bool isInList(const T&);
+	//void deleteNodo(const T&);
+protected:
+	Nodedc<T>*head,*tail;
+
+};
+#endif

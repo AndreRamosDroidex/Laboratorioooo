@@ -1,0 +1,107 @@
+#include "listasC-D.h"
+#include <iostream>
+using namespace std;
+
+template<class T>
+Listdc<T>::~Listdc(){
+    for(Nodedc<T> *p;!isEmpty();){
+	p=p->prev;
+	delete tail;
+        tail=p;
+    }
+}
+template<class T>
+void Listdc<T> :: addToDLLTail(const T& el){
+	if(tail !=0){
+		tail=new Nodedc<T>(el,head,tail);
+		tail->prev->next=tail;
+	}
+	else head=tail=new Nodedc<T>(el,head,0);
+}
+
+
+template <class T>
+T Listdc<T>::deleteFromDLLTail() {
+    T el =tail->info;
+    if(head == tail){
+            delete head;
+            head=tail=0;
+    }
+    else{
+        tail=tail->prev;
+        delete tail->next;
+        tail->next=0;
+    }
+    return el;
+}
+template <class T>
+T Listdc<T>::deleteFromDLLHead() {
+    T el =head->info;
+    if(head == tail){
+            delete head;
+            head=tail=0;
+    }
+    else{
+        Nodedc<T>*tmp=head;
+        head=head->next;
+        delete tmp;
+        head->prev=0;
+    }
+    return el;
+}
+template <class T>
+void Listdc<T>::deleteNode(const T& el){
+    
+    if(head !=0){
+        if(head==tail && el==head->info){
+		   delete head;
+		   head=tail=0;
+		
+        }
+        else if(el==head->info){
+            Nodedc<T>*tmp=head;
+            head=head->next;
+            delete tmp;
+	            
+	}
+        else{
+            Nodedc<T>*tmp;
+	    Nodedc<T>*tmp2;	    
+	    tmp=head;
+	    while(tmp!=NULL && tmp->info!=el){		
+		//cout<<tmp->info<<endl;
+		//cout<<tmp->prev->info<<endl;		
+		tmp=tmp->next;
+			
+		
+		}
+	   tmp->prev->next=tmp->next;
+	    //tmp->prev->next=tmp->next;
+	    //cout<<tmp->prev->info<<endl;
+           tmp->next->prev=tmp->prev;
+	    
+	   delete tmp;
+            //for(tmp=head->next;tmp!=NULL && !(tmp->info=el);tmp=tmp->next)
+            //tmp->prev->next=tmp->next;
+	    //cout<<tmp->prev->info<<endl;
+            //tmp->next->prev=tmp->prev;
+	    //delete tmp;
+        
+    }
+  }
+}
+
+//bool IntSLList::isInList(int el)const{
+//	IntNode *tmp;
+//	for(tmp=head;tmp!=0 && !(tmp->info==el);tmp=tmp->next);
+//	return tmp!=0;
+//}
+template <class T>
+void Listdc<T>::print_listDobl(){
+	Nodedc<T> *p;
+	for(p=tail;!(p==NULL);p=p->prev){				 
+		cout<<p->info << " ";
+
+	}  
+}
+
